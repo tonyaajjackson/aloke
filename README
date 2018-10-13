@@ -1,0 +1,13 @@
+Aloke - a tool for generating random words similar to existing words
+
+To use this tool, first generate a probability array using prob_calc.py:
+1) Change file_path to your file
+2) If necessary, adjust the file importing process so that "words" is a list of strings
+3) Run prob_calc.py
+
+Then generate words by running word_gen.py
+
+
+
+Why "aloke"?
+I saw it painted on the side of a railway car and thought it would be an excellent randomly generated name.
