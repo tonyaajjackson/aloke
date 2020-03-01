@@ -11,7 +11,9 @@ with open(file_path) as read_file:
     # {{description: description}, {words: [list of words]} so the list of words
     # needs to be extracted for use
     words_raw = json.load(read_file)
-    words = words_raw["firstNames"]
+    for item in words_raw:
+        if type(words_raw[item]) == list:
+            words = words_raw[item] 
 
 # Set up array to hold cumulative probabiliies for each letter
 # 27x27 array where each row and column represents a letter, "`" is a beginning
