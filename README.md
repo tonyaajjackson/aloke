@@ -1,10 +1,10 @@
-# Aloke
+# aloke
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
-Aloke is a tool for generating random words similar to existing words.
+aloke is a tool for generating random words similar to existing words.
 
 ## How it works
-When given a list of words, Aloke analyzes the frequency and pattern of letters within each word to make a probability matrix. The probability matrix is then connected to a finite-state machine that moves about the probability matrix to generate new words.
+When given a list of words, aloke analyzes the frequency and pattern of letters within each word to make a probability matrix. The probability matrix is then connected to a finite-state machine that moves about the probability matrix to generate new words.
 
 ### Probability Matrix
 The probability matrix is a 27x27 array of cumulative probabilities. Each row represents the current letter. Each column value in a row represents the cumulative probability of that letter being the next letter in the word. The "`" character represents the beginning or end of a word.
@@ -85,9 +85,3 @@ new_words = word_gen(prob, num_words)
 ```python
 print("\n".join(new_words))
 ```
-
-# Why "aloke"?
-I saw it painted on the side of a railway car and thought it would be an excellent randomly generated name.
-
-It turns out to be a Hindu name meaning "light":
-https://www.bachpan.com/meaning-of-aloke.aspx
