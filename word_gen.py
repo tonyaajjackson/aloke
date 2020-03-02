@@ -3,9 +3,9 @@
 import numpy
 import random
 
-def word_gen(prob, num_names):
+def word_gen(prob, n_words):
     new_words = []
-    for x in range(num_names):
+    for x in range(n_words):
         end_of_word = False
         prev_letter = 0
         word = ""
