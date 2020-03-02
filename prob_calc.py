@@ -5,9 +5,10 @@ def prob_calc(words):
 
     # Count up instances of each letter in dataset
     for word in words:
-        prev_letter = 0     # Starting a new word, so the previous letter is a space
+        prev_letter = 0     # Starting a new word, so the previous letter is an end of line
         word = word.lower() + "`"       #Adding ` to detect end of word
         for letter in word:
+            assert letter != " ", "Space found in word. Ensure list of words does not contain spaces"
             current_letter = ord(letter) - 96   # Conver string to array index
             prob[prev_letter, current_letter] += 1
             prev_letter = current_letter
